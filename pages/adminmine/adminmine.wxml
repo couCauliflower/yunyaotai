@@ -1,0 +1,41 @@
+<image class="background_body" src="../../images/userhomeimgs/bgc.png"></image>
+<view class="wrap_body"></view>
+<view class="bgc-container"></view>
+<view class="statusBar" style="height:{{statusBarHeight}}px"></view>
+<view class="navBar" style="height:44px">
+  <text>个人中心</text>
+  <view class="backBtn" bindtap="backadminhome" data-backurl="{{backUrl}}">
+    <image class="backBtn_img" src="../../images/userhomeimgs/back.png"></image>
+  </view>
+</view>
+<view class="nickbgc">
+  <view class="addimg">
+    <image class="faceimg" src="{{faceimg}}" bindtap="uploadfaceimg"></image>
+  </view>
+  
+  <view class="nickname">{{adminname}}</view>
+</view>
+<view class="list">
+  <view class="purchase" bindtap="toadminmessage" data-adminid="{{adminInfo.id}}">
+    <image class="purchase_img" src="../../images/mine/message.png"></image>
+    <text class="purchase_text">我的消息</text>
+    <image class="purchase_right" src="../../images/mine/right.png"></image>
+  </view>
+  <view class="comment" bindtap="toaddadmin">
+    <image class="comment_img" src="../../images/mine/shirt.png"></image>
+    <text class="comment_text">添加管理员</text>
+    <image class="purchase_right" src="../../images/mine/right.png"></image>
+  </view>
+  <view class="message" bindtap="tochangeadmininfo">
+    <image class="message_img" src="../../images/mine/four.png"></image>
+    <text class="message_text">信息修改</text>
+    <image class="purchase_right" src="../../images/mine/right.png"></image>
+  </view>
+  <view class="messages" bindtap="tochangeadminlist">
+    <image class="message_img" src="../../images/mine/admin.png"></image>
+    <text class="message_text">已有管理员</text>
+    <image class="purchase_right" src="../../images/mine/right.png"></image>
+  </view>
+</view>
+
+

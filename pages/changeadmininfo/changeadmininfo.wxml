@@ -1,0 +1,4 @@
+<!--pages/changeadmininfo/changeadmininfo.wxml-->
+<admin-editor title="个人信息" btntext="确认修改" bind:tochangeadmin="changeinfo" data-info="{{infoMessage}}"
+  infos="{{infoMessage}}" bindtoupdateadminpic="updateadminpic" url="{{url}}"
+></admin-editor>

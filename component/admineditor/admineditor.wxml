@@ -1,0 +1,36 @@
+<nav-bar text="{{title}}"></nav-bar>
+<view class="wrap_body"></view>
+<scroll-view
+  class="scroll"
+  scroll-y="true"
+>
+  <view class="drugImg" bindtap="adddrugpic">
+  <image class="drugurl" src="{{url}}"></image>
+</view>
+
+<view class="info">
+  <view class="name">
+    <text class="name_text">名字</text>
+    <input class="name_input" placeholder="{{infos==null?'请输入名字':infos.name}}" bindinput="nameinput"/>
+  </view>
+  <view class="name">
+    <text class="name_text">密码</text>
+    <input class="name_input" placeholder="{{infos==null?'请输入密码':infos.password}}" bindinput="passwordinput"/>
+  </view>
+  <view class="name">
+    <text class="name_text">确认密码</text>
+    <input class="name_input" placeholder="{{infos==null?'请再确认密码':infos.confirmPassword}}" bindinput="cpasswordinput"/>
+  </view>
+  <view class="intro">
+    <text class="intro_text">基本信息</text>
+    <textarea class="intro_area" placeholder="{{infos==null?'请输入个人基本信息':infos.info}}" bindinput="infoinput"></textarea>
+  </view>
+</view>
+</scroll-view>
+
+<view class="add" bindtap="buttontap"
+data-name="{{name}}" data-pwd="{{password}}" data-cpwd="{{confirmpassword}}"
+data-info="{{info}}" 
+>
+  <text class="add_text">{{btntext}}</text>
+</view>

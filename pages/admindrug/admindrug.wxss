@@ -1,0 +1,92 @@
+/* pages/admindrug.wxss */
+.wrap_body{
+  width:100%;
+  height:100vh;
+  background-color:#f4f4f4;
+  position:fixed;
+  top:0;
+  z-index:-11;
+}
+.bgc-container{
+  width:100%;
+  /* height:128rpx; */
+  height:9.595202vh;
+  background-color: #5bc1c2;
+  position:fixed;
+  top:0;
+  z-index:-1;
+}
+.navBar{
+  width:210rpx;
+  font-size:36rpx;
+  font-weight:bold;
+  color:#ffffff;
+  font-family: STXihei Regular, STXihei Regular-Regular;
+  margin:0 auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.backBtn{
+  position:absolute;
+  left:45rpx;
+  display:flex;
+  align-items:center;
+}
+.backBtn_img{
+  width:40rpx;
+  height:50rpx;
+}
+.drugImg{
+  width:750rpx;
+  height:478rpx;
+  text-align:center;
+  background-color: #fff;
+  margin-bottom:15rpx;
+}
+
+.info{
+  padding:25rpx;
+  background-color: #fff;
+  margin:20rpx 0;
+  border-radius: 25rpx;
+}
+.infoList{
+  margin-top:15rpx;
+}
+.info-left{
+  font-size:32rpx;
+  font-weight:600;
+}
+.info-right{
+  font-size:32rpx;
+}
+
+.bottom{
+  height:7.49625vh;
+  width:750rpx;
+  position:fixed;
+  bottom:0;
+  display:flex;
+  line-height:7.49625vh;
+  color:#ffffff;
+  font-size:45rpx;
+}
+.move{
+  flex:1;
+  text-align:center;
+  background-color: #08f0ed;
+}
+.remove{
+  flex:1;
+  text-align:center;
+  background-color: #3492c2;
+}
+.scroll{
+  height:82.908545vh;
+}
+.scroll ::-webkit-scrollbar{
+  width:0;
+  height:0;
+  color:transparent;
+}

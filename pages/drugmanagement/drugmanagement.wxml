@@ -1,0 +1,43 @@
+<!--pages/drugmanagement/drugmanagement.wxml-->
+<view class="bgc-container"></view>
+<view class="statusBar" style="height:{{statusBarHeight}}px"></view>
+<view class="navBar" style="height:44px">
+  <text>药品管理</text>
+  <view class="backBtn" bindtap="backadminhome">
+    <image class="backBtn_img" src="../../images/userhomeimgs/back.png"></image>
+  </view>
+</view>
+<view class="title">
+  <scroll-view class="title_scroll"
+  scroll-x="true"
+  scroll-top="{{scrollTop}}"
+  scroll-into-view="{{toView}}"
+  >
+  <block class="title_list" wx:for="{{title}}" wx:key="index">
+    <view id="{{item.scrolltag}}" class="title_text {{item.tag==tag?'active':''}}" 
+    bindtap="changeTitle" data-num="{{item.tag}}" data-titleindex="{{item.message}}"
+    data-type="{{item.type}}">
+      {{item.message}}
+    </view>
+  </block>
+  </scroll-view>
+</view>
+<scroll-view
+  class="drug-scroll"
+  scroll-y="true"
+>
+<view class="drug">
+  <block wx:for="{{druglist}}" wx:key="index">
+    <view class="drugList" bindtap="toadmindrug" data-id="{{item.id}}">
+      <image class="drugListImg" src="{{item.img1}}"></image>
+    <view class="text_info">
+      <text class="name">{{item.name}}</text>
+      <text class="storage">已售{{item.limitNumber==null?0:item.limitNumber}}</text>
+    </view>
+    </view>
+  </block>
+</view>
+</scroll-view>
+<view class="add" bindtap="toadddrug">
+  <text class="add_text">添加药品</text>
+</view>

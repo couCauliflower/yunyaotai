@@ -1,0 +1,39 @@
+<!--pages/speakadmin/speakadmin.wxml-->
+<view class="bgc-container"></view>
+<view class="statusBar" style="height:{{statusBarHeight}}px"></view>
+<view class="navBar" style="height:44px">
+  <text>我的留言</text>
+  <view class="backBtn" bindtap="backmine" data-backurl="{{backUrl}}">
+    <image class="backBtn_img" src="../../images/userhomeimgs/back.png"></image>
+  </view>
+</view>
+<view class="wrap"></view>
+<view class="title">
+  <text class="title-text">所有留言</text>
+</view>
+<scroll-view
+class="scroll"
+scroll-y="true"
+>
+<view class="list">
+  <view class="commentdrug" wx:for="{{adminlist}}" wx:key="index">
+    <image class="drugimg" src="{{item.adminpic}}"></image>
+    <text class="drugtext">{{item.amminname}}</text>
+    <text class="info">{{item.admininfo}}</text>
+    <image class="more" src="../../images/mine/more.png" bindtap="showmore" data-index="{{item.index}}" wx:if="{{item.index!==currenttag}}"></image>
+    <view class="commentList" wx:if="{{item.index==currenttag}}">
+      <view class="none">
+        <text class="nickname">{{item.username}}:</text>
+      <view class="detail">
+        <text class="message">{{item.message}}</text>
+      </view>
+      <view class="right">
+        <view class="time">{{item.time}}</view>
+        <image class="delete" src="../../images/mine/deletered.png" bindtap="deletemessage" data-id="{{item.id}}"></image>
+      </view>
+      </view>
+        
+    </view>
+  </view>
+</view>
+</scroll-view>

@@ -1,0 +1,94 @@
+/* pages/login/login.wxss */
+.bgc{
+  position:fixed;
+  z-index:-1;
+  bottom:0;
+  width:750rpx;
+  height:100vh;
+}
+.main{
+  width:300rpx;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align:center;
+}
+.logoimg{
+  width:42rpx;
+  height:42rpx;
+}
+.userimg{
+  width:30rpx;
+  height:35rpx;
+  vertical-align: middle;
+  position: absolute;
+  top:50%;
+  transform: translate(0,-50%);
+
+}
+.passimg{
+  width:27rpx;
+  height:31rpx;
+  vertical-align: middle;
+  position: absolute;
+  top:50%;
+  transform: translate(0,-50%);
+
+}
+.title{
+  font-size:48rpx;
+  color: #ffffff;
+}
+.logo{
+  margin-top:21rpx;
+  margin-bottom:32rpx;
+}
+.username{
+  display:flex;
+  position: relative;
+  padding-bottom:10rpx;
+  border-bottom:1rpx solid rgba(256,256,256);
+}
+.password{
+  margin-top:30rpx;
+  margin-bottom:30rpx;
+  display:flex;
+  position:relative;
+  padding-bottom:10rpx;
+  border-bottom:1rpx solid rgba(256,256,256);
+}
+.userinput,.passwordinput{
+  color: #1a1919;
+  font-size:30rpx;
+}
+.login{
+  position:relative;
+  width:287rpx;
+  height:59rpx;
+}
+.loginimg{
+  width:287rpx;
+  height:59rpx;
+}
+.login-text{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color:#ffffff;
+  font-size:30rpx;
+}
+.sign{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size:28rpx;
+  margin-top:20rpx;
+  color:white;
+}
+.left{
+  height:2rpx;
+  width:50rpx;
+  background-color: white;
+}

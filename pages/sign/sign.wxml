@@ -1,0 +1,26 @@
+<!--pages/login/login.wxml-->
+<view class="wrap">
+  <image class="bgc" src="../../images/login/bg.png"></image>
+</view>
+<view class="main">
+  <view class="title">云药台</view>
+  <view class="logo">
+    <image class="logoimg" src="../../images/login/logo.png"></image>
+  </view>
+  <view class="username">
+    <image class="userimg" src="../../images/login/admin.png"></image>
+    <input class="userinput" placeholder="username" bindinput="usernameinput"/>
+  </view>
+  <view class="password">
+    <image class="passimg" src="../../images/login/password.png"></image>
+    <input class="passwordinput" placeholder="password" bindinput="passwordinput"/>
+  </view>
+  <view class="password">
+    <image class="passimg" src="../../images/login/confirm.png"></image>
+    <input class="inputb" placeholder="confirm" bindinput="confirminput"/>
+  </view>
+  <view class="login" bindtap="tosign">
+    <image class="loginimg" src="/images/login/register.png"></image>
+    <text class="login-text">注册</text>
+  </view>
+</view>

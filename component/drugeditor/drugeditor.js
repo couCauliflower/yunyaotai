@@ -1,0 +1,92 @@
+Component({
+  properties:{
+    title:String,
+    url:{
+      type:String,
+      value:"../../images/adminhome/addpic.png",
+    },
+    btntext:String,
+    drug:null,
+    drugimg:null,
+  },
+  data:{
+    name:"",
+    info:"",
+    used:"",
+    storageMonth:"",
+    productTime:"",
+    storageNumber:"",
+    price:""
+  },
+  methods:{
+    nameinput(e){
+      console.log(e.detail.value);
+      var name=e.detail.value;
+      console.log(name);
+      this.setData({
+        name:name
+      })
+    },
+    infoinput(e){
+      console.log(e.detail.value);
+      var info=e.detail.value;
+      this.setData({
+        info:info
+      })
+    },
+    usedinput(e){
+      console.log(e.detail.value);
+      var used=e.detail.value;
+      this.setData({
+        used:used
+      })
+    },
+    storageMonthinput(e){
+      console.log(e.detail.value);
+      var storageMonth=e.detail.value;
+      this.setData({
+        storageMonth:storageMonth
+      })
+    },
+    productTimeinput(e){
+      console.log(e.detail.value);
+      var productTime=e.detail.value;
+      this.setData({
+        productTime:productTime
+      })
+    },
+    storageNumberinput(e){
+      console.log(e.detail.value);
+      var storageNumber=e.detail.value;
+      this.setData({
+        storageNumber:storageNumber
+      })
+    },
+    priceinput(e){
+      var price=e.detail.value;
+      this.setData({
+        price:price,
+      })
+    },
+    changedrug(e){
+      console.log(e);
+      var changemessage={
+        id:e.currentTarget.dataset.id,
+        name:e.currentTarget.dataset.name,
+        info:e.currentTarget.dataset.info,
+        used:e.currentTarget.dataset.used,
+        storageMonth:e.currentTarget.dataset.storagemonth,
+        productTime:e.currentTarget.dataset.producttime,
+        storageNumber:e.currentTarget.dataset.storagenumber,
+        price:e.currentTarget.dataset.price
+      }
+      console.log(changemessage);
+      this.triggerEvent("tochangedrug",changemessage);
+      this.triggerEvent("toadddrug",changemessage);
+    },
+    drugimgtap:function(e){
+      this.triggerEvent("toadddrugpic");
+      this.triggerEvent("toupdatedrugpic");
+    }
+  },
+})

@@ -1,0 +1,77 @@
+<!--pages/purchase/purchase.wxml-->
+<view class="bgc-container"></view>
+<view class="statusBar" style="height:{{statusBarHeight}}px"></view>
+<view class="navBar" style="height:44px">
+  <text>我的购买</text>
+  <view class="backBtn" bindtap="backmine" data-backurl="{{backUrl}}">
+    <image class="backBtn_img" src="../../images/userhomeimgs/back.png"></image>
+  </view>
+</view>
+<view class="title">
+  <view class="already {{showactive==1?'active':''}}" bindtap="toalready">
+    <text class="already_text">已评价</text>
+    <view class="slide" wx:if="{{showslide}}"></view>
+  </view>
+  <view class="nomark {{showactive==2?'active':''}}" bindtap="tonoready">
+    <text class="nomark_text">未评价</text>
+    <view class="noslide" wx:if="{{shownoslide}}"></view>
+  </view>
+</view>
+<scroll-view
+class="scroll"
+scroll-y="true">
+<view class="drug" wx:if="{{showready}}">
+  <block wx:for="{{druglist}}" wx:key="index">
+    <view class="drugList" bindtap="toDrugDetail">
+      <image class="drugListImg" src="{{item.drug.img1}}"></image>
+    <view class="text_info">
+      <view class="text_intro">{{item.drug.info}}</view>
+      <view class="text_count">{{item.drug.used}}</view>
+      <view class="text_price">{{item.drug.price}}
+        <image src="../../images/mine/deletered.png" class="deleteimg" bindtap="deletedrug" data-id="{{item.id}}"></image>
+      </view>
+    </view>
+    </view>
+  </block>
+</view>
+
+<view class="comment" wx:if="{{showcomment}}">
+  <block wx:for="{{druglist}}" wx:key="index">
+    <view class="drugList">
+      <image class="drugListImg" src="{{item.drug.img1}}"></image>
+    <view class="text_info">
+      <view class="text_intro">{{item.drug.info}}</view>
+      <view bindtap="toComment" data-name="{{item.drug.name}}" data-userid="{{item.user.id}}" data-drugid="{{item.drug.id}}"
+      data-id="{{item.id}}">
+        <text class="sendmessage" >去评价</text>
+      </view>
+       
+
+      <view class="text_price">{{item.drug.price}}
+
+      </view>
+      <image src="../../images/mine/deleteactive.png" class="deleteimg"></image>
+    </view>
+    </view>
+  </block>
+</view>
+</scroll-view>
+<view class="showMessage" wx:if="{{showMessage}}">
+  <view class="gray">
+  </view>
+  <view class="container_wrap">
+    <view class="top">
+      <text class="top_text">对药品{{drugname}}评价</text>
+      <image class="top_img" bindtap="deleteback" src="../../images/buy/delete.png" bindtap="deleteback"></image>
+    </view>
+    <view class="bottom">
+      <input class="input" placeholder="请输入留言内容" bindinput="messageinput"/>
+      <view class="send" bindtap="sendMessage">
+        <text class="send_text">发送</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="toast" wx:if="{{showToast}}">
+  <text>发送成功</text>
+</view>

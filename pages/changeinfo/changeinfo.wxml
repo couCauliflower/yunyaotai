@@ -1,0 +1,4 @@
+<!--pages/changeinfo/changeinfo.wxml-->
+<drug-editor title="药品修改" url="druginfo.img1" btntext="确认修改" drug="{{druginfo}}" 
+  bindtochangedrug="changedrug" bindtoupdatedrugpic="updatedrugpic" drugimg="{{drugimg}}"
+></drug-editor>

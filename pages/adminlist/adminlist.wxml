@@ -1,0 +1,20 @@
+<!--pages/adminlist/adminlist.wxml-->
+<view class="wrap"></view>
+<view class="bgc-container"></view>
+<view class="statusBar" style="height:{{statusBarHeight}}px"></view>
+<view class="navBar" style="height:44px">
+  <text>所有管理员</text>
+  <view class="backBtn" bindtap="backadminmine" >
+    <image class="backBtn_img" src="../../images/userhomeimgs/back.png"></image>
+  </view>
+</view>
+<scroll-view
+class="scroll"
+scroll-y="true">
+<view wx:for="{{adminList}}" wx:key="index" class="list">
+  <image src="{{item.faceimg}}" class="list_img"></image>
+ <text class="list_name">{{item.name}}</text> 
+<text class="list_info">{{item.info}}</text>
+</view>
+</scroll-view>
+

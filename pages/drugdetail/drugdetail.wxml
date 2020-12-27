@@ -1,0 +1,118 @@
+<!--pages/drugdetail/drugdetail.wxml-->
+<view class="wrap_body"></view>
+<navBar text="药品详情" backUrl="../../pages/userhome/userhome"></navBar>
+<view class="top">
+  <view class="titleBar">
+  <view class="title_text {{flag==1?'active':''}}" bindtap="toSwiper">商品</view>
+  <view class="title_text {{flag==2?'active':''}}" bindtap="toInfo">详情</view>
+  <view class="title_text {{flag==3?'active':''}}" bindtap="toComment">评价</view>
+</view>
+</view>
+<scroll-view class="scroll"
+  scroll-y="true"
+  scroll-into-view="{{toView}}"
+  bindscroll="listenScroll"
+  data-swipertop="{{swiperOffsetTop}}"
+  data-infotop="{{infoOffsetTop}}"
+  data-commenttop="{{commentOffsetTop}}"
+>
+  <view class="swiperImg" id="swiper">
+  <swiper class="swiperContainer"
+  indicator-dots="true"
+  indicator-color="rgba(0,0,0,.3)"
+  indicator-active-color="#5bc1c2"
+  autoplay="true"
+  interval="3000"
+  duration="1000"
+  circular="true"
+  >
+    <block class="swiperBlock" wx:for="{{imgList}}" wx:key="index">
+      <swiper-item class="swiperList">
+        <image class="swiperimage" src="{{item.url}}"></image>
+      </swiper-item>
+    </block>
+
+  </swiper>
+</view>
+
+<view class="purchase">
+  <view class="purchase_left">
+    <view class="drugname">{{drugDetail.name}}</view>
+    <view class="restnumber">仅剩{{drugDetail.restcount}}盒,限购{{drugDetail.tosell}}盒/人</view>
+  </view>
+  <view class="price">￥{{drugDetail.price}}</view>
+</view>
+
+<view class="info" id="info">
+  <view class="infoList">
+   <text class="info-left">【功用】</text>
+   <text class="info-right">{{info}}</text>
+ </view>
+ <view class="infoList">
+   <text class="info-left">【用法用量】</text>
+   <text class="info-right">{{used}}</text>
+ </view>
+ <view class="infoList">
+   <text class="info-left">【有效期】</text>
+   <text class="info-right">{{storageMonth}}个月</text>
+ </view>
+ <view class="infoList">
+   <text class="info-left">【生产日期】</text>
+   <text class="info-right">{{productTime}}</text>
+ </view>
+</view>
+
+<view class="comment" id="comment">
+  <view class="comment_title">
+    <text class="main">评价</text>
+    <text class="num">({{commentNumber}})</text>
+  </view>
+  <block class="block" wx:for="{{commentList}}" wx:key="index">
+   <view class="list">
+    <view class="user">
+    <image class="faceurl" src="{{item.faceurl}}"></image>
+    <text class="nick">{{item.nickname}}</text>
+    <text class="time">{{item.time}}</text>
+  </view>
+  <view class="comment_detail">
+    <text class="comment_text">{{item.detail}}</text>
+  </view>
+   </view>
+  </block>
+</view>
+</scroll-view>
+<view class="bottom">
+  <view class="message" bindtap="leaveMessage">
+    <image class="message_img" src="../../images/userhomeimgs/message.png"></image>
+    <text class="message_text">留言</text>
+  </view>
+  <view class="purchaseBtn" bindtap="purchase">
+    <text class="purchase_text">购买</text>
+  </view>
+</view>
+
+<view class="buyToast" wx-if="{{showBuy}}">
+  <view class="gray"></view>
+  <view class="buyPage">
+    <view class="buyPageTop">
+      <image class="pic" src="{{drugDetail.img}}"></image>
+      <text class="dollar">￥{{drugDetail.price}}</text>
+      <image class="delete" src="../../images/buy/delete.png" bindtap="deleteBack"></image>
+    </view>
+    <view class="buyPageMiddle">
+      <text class="middelText">购买数量</text>
+      <text class="storage">库存{{drugDetail.storageNumber}}件</text>
+      <view class="buyCount">
+        <image class="add" src="../../images/buy/add.png" bindtap="addNumber" data-number="{{number}}"></image>
+        <view class="account">{{number}}</view>
+        <image class="sub" src="../../images/buy/sub.png" bindtap="subNumber" data-number="{{number}}"></image>
+      </view>
+    </view>
+    <view class="buyPageBottom" bindtap="buyDrug">
+      <text>确认</text>
+    </view>
+  </view>
+</view>
+<view class="toast" wx:if="{{showToast}}" >
+  <text>购买成功</text>
+</view>

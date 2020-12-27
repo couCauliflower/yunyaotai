@@ -1,0 +1,123 @@
+/* pages/comment/comment.wxss */
+.bgc-container{
+  width:100%;
+  /* height:128rpx; */
+  height:9.595202vh;
+  background-color: #5bc1c2;
+  position:fixed;
+  top:0;
+  z-index:-1;
+}
+.navBar{
+  width:210rpx;
+  font-size:36rpx;
+  font-weight:bold;
+  color:#ffffff;
+  font-family: STXihei Regular, STXihei Regular-Regular;
+  margin:0 auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.backBtn{
+  position:absolute;
+  left:45rpx;
+  display:flex;
+  align-items:center;
+}
+.backBtn_img{
+  width:40rpx;
+  height:50rpx;
+}
+.drugimg{
+  width:250rpx;
+  height:250rpx;
+  vertical-align: -webkit-baseline-middle;
+}
+.more{
+  width:88rpx;
+  height:16rpx;
+}
+.wrap{
+  position:fixed;
+  width:750rpx;
+  height:90.404797vh;
+  background-color: rgb(248, 245, 245);
+  z-index:-1;
+  bottom:0;
+}
+.title{
+  height:100rpx;
+  line-height:100rpx;
+  width:750rpx;
+  background-color: #fff;
+}
+.title-text{
+  margin-left:50rpx;
+  font-weight:bold;
+}
+.commentdrug{
+  width:720rpx;
+  padding:0 15rpx;
+  margin:10rpx 0;
+  background-color: #fff;
+  border-radius:30rpx;
+  position:relative;
+}
+.drugtext{
+  margin-left:20rpx;
+  font-size:36rpx;
+}
+.more{
+  position:absolute;
+  right:40rpx;
+  top:100rpx;
+}
+.scroll{
+  height:82.90854vh;
+}
+.scroll ::-webkit-scrollbar{
+  color:transparent;
+  width:0;
+  height:0;
+}
+.nickname{
+  color:#383737;
+  font-size:30rpx;
+}
+.message{
+  color:#383737;
+  font-size:30rpx;
+}
+.delete{
+  width:50rpx;
+  height:50rpx;
+}
+.none{
+  display:flex;
+  border-bottom:1rpx solid rgba(0,0,0,.2);
+  margin-bottom:5rpx;
+}
+.nickname{
+  flex:1.5;
+  margin-top:8rpx;
+}
+.detail{
+  flex:2;
+  margin-left:-40rpx;
+}
+.right{
+  flex:2;
+}
+.time{
+  color: #383737;
+  font-size:24rpx;
+  margin-left:80rpx;
+  margin-top:10rpx;
+}
+.delete{
+  margin-left:150rpx;
+  width:40rpx;
+  height:40rpx;
+  margin-top:5rpx;
+}

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "drug-editor":"/component/drugeditor/drugeditor"
+  }
+}

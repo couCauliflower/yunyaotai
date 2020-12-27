@@ -1,0 +1,30 @@
+.bgc-container{
+  width:100%;
+  /* height:128rpx; */
+  height:9.595202vh;
+  background-color: #5bc1c2;
+  position:fixed;
+  top:0;
+  z-index:-1;
+}
+.navBar{
+  width:210rpx;
+  font-size:36rpx;
+  font-weight:bold;
+  color:#ffffff;
+  font-family: STXihei Regular, STXihei Regular-Regular;
+  margin:0 auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.backBtn{
+  position:absolute;
+  left:45rpx;
+  display:flex;
+  align-items:center;
+}
+.backBtn_img{
+  width:40rpx;
+  height:50rpx;
+}

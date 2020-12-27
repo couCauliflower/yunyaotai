@@ -1,0 +1,39 @@
+<!--pages/message/message.wxml-->
+<nav-bar text="留言"></nav-bar>
+<view class="graybgc"></view>
+<scroll-view
+  scroll-y="true"
+  class="scroll"
+>
+  <view class="title">
+  <text class="title_text">已有管理员</text>
+</view>
+<view class="list" wx:for="{{adminList}}" wx:key="index">
+  <image class="faceurl" src="{{item.faceimg}}"></image>
+  <text class="list_nick">{{item.name}}</text>
+  <text class="list_info">{{item.info}}</text>
+  <text class="message" bindtap="clickmessage" data-nickname="{{item.name}}" data-adminid="{{item.id}}">留言</text>
+</view>
+
+</scroll-view>
+<view class="showMessage" wx:if="{{showMessage}}">
+  <view class="gray">
+  </view>
+  <view class="container_wrap">
+    <view class="top">
+      <text class="top_text">向{{nickname}}留言</text>
+      <image class="top_img" src="../../images/buy/delete.png" bindtap="deleteback"></image>
+    </view>
+    <view class="bottom">
+      <input class="input" placeholder="请输入留言内容" bindinput="inputtap"/>
+      <view class="send" bindtap="sendMessage" data-message="{{inputvalue}}" data-userid="{{userinfo.id}}"
+      data-adminid="{{adminid}}"
+      >
+        <text class="send_text">发送</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="toast" wx:if="{{showToast}}">
+  <text>发送成功</text>
+</view>

@@ -1,0 +1,35 @@
+/* pages/adminhome/adminhome.wxss */
+.bgcImg {
+  position:fixed;
+  top:0;
+  width:750px;
+  height:100vh;
+  z-index:-1;
+}
+.swiper-banners{
+  width:475rpx;
+  height:853rpx;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.navBar{
+  line-height:88rpx;
+  text-align:center;
+  color:#ffffff;
+}
+.drugImg{
+  width:475rpx;
+  height:853rpx;
+}
+.text{
+  width:36rpx;
+  margin:0 auto;
+  line-height:45rpx;
+  font-size:36rpx;
+  position: fixed;
+  top:50%;
+  transform: translate(0,-50%);
+  left:50rpx;
+}

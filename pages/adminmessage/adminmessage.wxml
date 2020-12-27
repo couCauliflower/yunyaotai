@@ -1,0 +1,29 @@
+<!--pages/comment/comment.wxml-->
+<nav-bar text="我的消息"></nav-bar>
+<scroll-view
+  scroll-y="true"
+  class="scroll"
+>
+<view class="title">
+  <text class="title-text">所有信息</text>
+</view>
+<view class="message">
+  <view class="message-list" wx:for="{{messagelist}}" wx:key="index">
+    <view class="nick">
+      <image src="{{item.from.faceimg}}" class="faceurl"></image>
+      <text class="name">{{item.from.name}}</text>
+    </view>
+    <view class="comment-list">
+      <view class="content-wrap">
+        <text class="content">{{item.message}}</text>
+      </view>
+      <view class="time">
+        <text class="time-text">{{item.time}}</text>
+        <image class="delete" bindtap="deletemessage" data-id="{{item.id}}" data-adminid="{{item.to.id}}" src="../../images/mine/deletered.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+</scroll-view>
+

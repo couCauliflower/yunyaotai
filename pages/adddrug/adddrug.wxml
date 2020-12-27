@@ -1,0 +1,2 @@
+<!--pages/adddrug/adddrug.wxml-->
+<drug-editor title="添加商品" btntext="确认添加" bindtoadddrug="adddrug" drugimg="{{drugimg}}" bindtoadddrugpic="addpic"></drug-editor>

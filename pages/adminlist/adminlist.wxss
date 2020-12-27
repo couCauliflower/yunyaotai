@@ -1,0 +1,69 @@
+/* pages/adminlist/adminlist.wxss */
+.bgc-container{
+  width:100%;
+  /* height:128rpx; */
+  height:9.595202vh;
+  background-color: #5bc1c2;
+  position:fixed;
+  top:0;
+  z-index:-1;
+}
+.navBar{
+  width:210rpx;
+  font-size:36rpx;
+  font-weight:bold;
+  color:#ffffff;
+  font-family: STXihei Regular, STXihei Regular-Regular;
+  margin:0 auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.backBtn{
+  position:absolute;
+  left:45rpx;
+  display:flex;
+  align-items:center;
+}
+.backBtn_img{
+  width:40rpx;
+  height:50rpx;
+}
+.list{
+  margin:0 auto;
+  width:710rpx;
+  padding:10rpx;
+  height:150rpx;
+  background-color: #fff;
+  margin-bottom:20rpx;
+  line-height:150rpx;
+  border-radius: 10rpx;
+}
+.list_img{
+  width:100rpx;
+  height:100rpx;
+  vertical-align: middle;
+  margin-left:20rpx;
+}
+.wrap{
+  position:fixed;
+  width:100%;
+  height:100vh;
+  z-index:-1;
+  background-color: rgba(0,0,0,.1);
+  top:0;
+}
+.list_name{
+  margin-left:20rpx;
+  margin-right:40rpx;
+  font-size:40rpx;
+  font-weight:bold;
+}
+.scroll{
+  height:90.40479vh;
+}
+.scroll ::-webkit-scrollbar{
+  width:0;
+  height:0;
+  color:transparent;
+}

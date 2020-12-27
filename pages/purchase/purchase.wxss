@@ -1,0 +1,217 @@
+/* pages/purchase/purchase.wxss */
+.bgc-container{
+  width:100%;
+  /* height:128rpx; */
+  height:9.595202vh;
+  background-color: #5bc1c2;
+  position:fixed;
+  top:0;
+  z-index:-1;
+}
+.navBar{
+  width:210rpx;
+  font-size:36rpx;
+  font-weight:bold;
+  color:#ffffff;
+  font-family: STXihei Regular, STXihei Regular-Regular;
+  margin:0 auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.backBtn{
+  position:absolute;
+  left:45rpx;
+  display:flex;
+  align-items:center;
+}
+.backBtn_img{
+  width:40rpx;
+  height:50rpx;
+}
+.title{
+  height:7.49625vh;
+  width:750rpx;
+  display:flex;
+  line-height:7.49625vh;
+}
+.active{
+  color: #0651fa;
+}
+.already{
+  flex:1;
+  text-align:center;
+  font-size:36rpx;
+  font-weight:bold;
+}
+.slide{
+  width:110rpx;
+  height:4rpx;
+  background-color: #0651fa;
+  margin:0 auto;
+}
+.noslide{
+  width:110rpx;
+  height:4rpx;
+  background-color: #0651fa;
+  margin:0 auto;
+}
+.nomark{
+  flex:1;
+  text-align:center;
+  font-size:36rpx;
+  font-weight:bold;
+}
+.drug{
+  margin-top:10rpx;
+}
+.drugList{
+  display:flex;
+  margin:0 10rpx;
+  border-bottom:1rpx solid rgba(0,0,0,.16);
+}
+.drugListImg{
+  flex:1;
+  height:250rpx;
+}
+.text_info{
+  flex:2;
+  padding:20rpx;
+  position:relative;
+}
+.text_intro{
+  width:450rpx;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  font-size:36rpx;
+  color:#000000;
+  margin-top:25rpx;
+}
+.text_count{
+  width:450rpx;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  font-size:30rpx;
+  color:#333232;
+  margin-top:25rpx;
+  position:relative;
+}
+
+.sendmessage{
+  position:absolute;
+  font-size:36rpx;
+  color:#05baf6;
+  right:0;
+  margin-top:30rpx;
+  margin-right:30rpx;
+  z-index:11;
+}
+.text_price{
+  font-size:40rpx;
+  margin-top:30rpx;
+  position:relative;
+}
+.number{
+  font-size:30rpx;
+  margin-left:10rpx;
+  color:#333232;
+}
+.deleteimg{
+  width:50rpx;
+  height:50rpx;
+  position:absolute;
+  bottom:20rpx;
+  right:10rpx;
+  z-index:11;
+}
+.scroll{
+  height:82.90854vh;
+}
+.scroll ::-webkit-scrollbar{
+  width:0;
+  height:0;
+  color:transparent;
+}
+
+.showMessage{
+  width:750rpx;
+  height:100vh;
+  position:fixed;
+  top:0;
+  z-index:11;
+}
+.gray{
+  width:750rpx;
+  height:18.139430vh;
+  background-color:rgba(0,0,0,.5);
+}
+.container_wrap{
+  width:750rpx;
+  height:81.86057vh;
+  background-color: #fff;
+}
+.top{
+  width:720rpx;
+  height:150rpx;
+  line-height:150rpx;
+  padding:15rpx;
+  position:relative;
+}
+.top_img{
+  width:50rpx;
+  height:50rpx;
+  position:absolute;
+  top:40rpx;
+  right:30rpx;
+}
+.bottom{
+  position:fixed;
+  bottom:0;
+  width:720rpx;
+  padding:15rpx;
+  height:70rpx;
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.input{
+  height:46rpx;
+  background-color:#e4e1e0;
+  margin-left:80rpx;
+  border-radius:28rpx;
+  padding:5rpx;
+  padding-left:12rpx;
+  font-size:30rpx;
+}
+.send{
+  width:154rpx;
+  height:52rpx;
+  line-height:52rpx;
+  opacity: 0.64;
+background: #f8af06;
+border-radius: 26px;
+margin-right:80rpx;
+text-align: center;
+}
+.send_text{
+  color:#040404;
+  font-size:30rpx;
+}
+.top_text{
+  color: #050505;
+  font-size:44rpx;
+  font-weight: 500;
+  margin-left:30rpx;
+}
+.toast{
+  position:fixed;
+  padding:10rpx;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color:rgba(0,0,0,.5);
+  z-index:99;
+  color:#ffffff;
+}

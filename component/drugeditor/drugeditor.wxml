@@ -1,0 +1,54 @@
+<nav-bar text="{{title}}"></nav-bar>
+<view class="wrap_body"></view>
+<scroll-view
+  class="scroll"
+  scroll-y="true"
+>
+  <view class="drugImg" bindtap="drugimgtap">
+  <image class="drugurl" src="{{drugimg}}"></image>
+</view>
+
+<view class="info">
+  <view class="name" >
+    <text class="name_text">名称</text>
+    <input class="name_input" placeholder="请输入药品名称" value="{{drug.name}}" bindinput="nameinput"/>
+  </view>
+  <view class="intro">
+    <text class="intro_text">功用</text>
+    <textarea class="intro_area" placeholder="请输入药品功用" value="{{drug.info}}" bindinput="infoinput"></textarea>
+  </view>
+  <view class="name">
+    <text class="name_text">用法用量</text>
+    <input class="name_input" placeholder="请输入药品规格" value="{{drug.used}}" bindinput="usedinput"/>
+  </view>
+  <view class="name">
+    <text class="name_text">有效期</text>
+    <input class="name_input" placeholder="请输入药品有效期" value="{{drug.storageMonth}}" bindinput="storageMonthinput"/>
+  </view>
+  <view class="name">
+    <text class="name_text">生产日期</text>
+    <input class="name_input" placeholder="请输入药品生产日期" value="{{drug.productTime}}" bindinput="productTimeinput"/>
+  </view>
+  <view class="name">
+    <text class="name_text">库存</text>
+    <input class="name_input" placeholder="请输入药品库存" value="{{drug.storageNumber}}" bindinput="storageNumberinput"/>
+  </view>
+  <view class="name">
+    <text class="name_text">售价</text>
+    <input class="name_input" placeholder="请输入药品价格" value="{{drug.price}}" bindinput="priceinput"/>
+  </view>
+</view>
+</scroll-view>
+
+<view class="add" bindtap="changedrug"
+data-name="{{name}}"
+    data-info="{{info}}"
+    data-used="{{used}}"
+    data-storagemonth="{{storageMonth}}"
+    data-producttime="{{productTime}}"
+    data-storagenumber="{{storageNumber}}"
+    data-price="{{price}}"
+    data-id="{{drug.id}}"
+>
+  <text class="add_text">{{btntext}}</text>
+</view>

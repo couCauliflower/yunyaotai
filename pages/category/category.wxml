@@ -1,0 +1,42 @@
+<!--pages/category/category.wxml-->
+<view class="bgc-container"></view>
+<view class="statusBar" style="height:{{statusBarHeight}}px"></view>
+<view class="navBar" style="height:44px">
+  <text>分类</text>
+  <view class="backBtn" bindtap="backUserHome">
+    <image class="backBtn_img" src="../../images/userhomeimgs/back.png"></image>
+  </view>
+</view>
+<view class="title">
+  <scroll-view class="title_scroll"
+  scroll-x="true"
+  scroll-top="{{scrollTop}}"
+  scroll-into-view="{{toView}}"
+  >
+  <block class="title_list" wx:for="{{title}}" wx:key="index">
+    <view id="{{item.scrolltag}}" class="title_text {{item.tag==tag?'active':''}}" 
+    bindtap="changeTitle" data-num="{{index}}" 
+    data-type="{{item.type}}"
+    data-titleindex="{{item.message}}">
+      {{item.message}}
+    </view>
+  </block>
+  </scroll-view>
+</view>
+<scroll-view
+  class="drug-scroll"
+  scroll-y="true"
+>
+<view class="drug">
+  <block wx:for="{{druglist}}" wx:key="index">
+    <view class="drugList" bindtap="toDrugDetail" data-id="{{item.id}}">
+      <image class="drugListImg" src="{{item.img1}}"></image>
+    <view class="text_info">
+      <view class="text_intro">{{item.info}}</view>
+      <view class="text_count">{{item.used}}</view>
+      <view class="text_price">￥{{item.price}}</view>
+    </view>
+    </view>
+  </block>
+</view>
+</scroll-view>

@@ -1,0 +1,110 @@
+/* pages/drugmanagement/drugmanagement.wxss */
+.bgc-container{
+  width:100%;
+  /* height:128rpx; */
+  height:9.595202vh;
+  background-color: #5bc1c2;
+  position:fixed;
+  top:0;
+  z-index:-1;
+}
+.navBar{
+  width:210rpx;
+  font-size:36rpx;
+  font-weight:bold;
+  color:#ffffff;
+  font-family: STXihei Regular, STXihei Regular-Regular;
+  margin:0 auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.backBtn{
+  position:absolute;
+  left:45rpx;
+  display:flex;
+  align-items:center;
+}
+.backBtn_img{
+  width:40rpx;
+  height:50rpx;
+}
+.title{
+  /* height:100rpx; */
+  height:7.496251vh;
+  display:flex;
+  align-items: center;
+  background-color: #5bc1c2;
+  padding:0 20rpx;
+}
+.title_scroll{
+  white-space:nowrap;
+}
+.title_text{
+  display:inline-block;
+  margin:0 10rpx;
+  color:#ffffff;
+}
+.active{
+  color:#094daa;
+  font-size:36rpx;
+  font-weight: 700;
+}
+
+.drugList{
+  display:flex;
+  margin:0 10rpx;
+  border-bottom:1rpx solid rgba(0,0,0,.16);
+}
+.drugListImg{
+  flex:1;
+  height:250rpx;
+}
+.text_info{
+  flex:2;
+  padding:20rpx;
+  line-height:250rpx;
+  position:relative;
+}
+.name{
+  font-weight: bold;
+  font-size:40rpx;
+}
+.storage{
+  font-size:30rpx;
+  color: #373636;
+  margin-left:15rpx;
+  position: absolute;
+  right:25rpx;
+
+}
+
+
+.drug-scroll{
+  height:75.412293vh;
+}
+/* 隐藏滚动条 */
+.drug-scroll ::-webkit-scrollbar{
+  width:0;
+  height:0;
+  color:transparent;
+}
+.title_scroll ::-webkit-scrollbar{
+  width:0;
+  height:0;
+  color:transparent;
+
+}
+.add{
+  height:90rpx;
+  width:720rpx;
+  background-color: #0651fa;
+  position:fixed;
+  bottom:10rpx;
+  left:15rpx;
+  border-radius:45rpx;
+  line-height:90rpx;
+  text-align: center;
+  color:#ffffff;
+  font-size:40rpx;
+}

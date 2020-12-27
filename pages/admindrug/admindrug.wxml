@@ -1,0 +1,53 @@
+<!--pages/admindrug.wxml-->
+<view class="wrap_body"></view>
+<view class="bgc-container"></view>
+<view class="statusBar" style="height:{{statusBarHeight}}px"></view>
+<view class="navBar" style="height:44px">
+  <text>药品详情</text>
+  <view class="backBtn" bindtap="backdrug" data-backurl="{{backUrl}}">
+    <image class="backBtn_img" src="../../images/userhomeimgs/back.png"></image>
+  </view>
+</view>
+<scroll-view
+  scroll-y="true"
+  class="scroll"
+>
+  <view class="drugImg">
+  <image class="drugurl" src="{{drugimg}}"></image>
+</view>
+<view class="info" id="info">
+  <view class="infoList">
+   <text class="info-left">【名称】</text>
+   <text class="info-right">{{drugInfo.name}}</text>
+ </view>
+ <view class="infoList">
+   <text class="info-left">【功用】</text>
+   <text class="info-right">{{drugInfo.info}}</text>
+ </view>
+ <view class="infoList">
+   <text class="info-left">【用法用量】</text>
+   <text class="info-right">{{drugInfo.used}}</text>
+ </view>
+ <view class="infoList">
+   <text class="info-left">【有效期】</text>
+   <text class="info-right">{{drugInfo.storageMonth}}</text>
+ </view>
+ <view class="infoList">
+   <text class="info-left">【生产日期】</text>
+   <text class="info-right">{{drugInfo.productTime}}</text>
+ </view>
+ <view class="infoList">
+   <text class="info-left">【库存】</text>
+   <text class="info-right">{{drugInfo.storageNumber}}</text>
+ </view>
+ <view class="infoList">
+   <text class="info-left">【售价】</text>
+   <text class="info-right">￥{{drugInfo.price}}</text>
+ </view>
+ 
+</view>
+</scroll-view>
+<view class="bottom">
+  <view class="move" bindtap="tochangeinfo" data-id="{{id}}">修改</view>
+  <view class="remove" bindtap="removedrug" data-id="{{id}}">删除</view>
+</view>

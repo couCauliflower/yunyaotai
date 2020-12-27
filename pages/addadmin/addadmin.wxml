@@ -1,0 +1,5 @@
+<!--pages/addadmin/addadmin.wxml-->
+<admin-editor id="addadmin" title="添加管理员" 
+btntext="确认添加" bind:toaddadmin="addadmin"
+bindtoadddrugpic="addadminpic" url="{{url}}"
+></admin-editor>

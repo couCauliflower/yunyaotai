@@ -1,0 +1,26 @@
+<!--pages/adminhome/adminhome.wxml-->
+<view class="bgc">
+  <image class="bgcImg" src="../../images/adminhome/adminbgc.png"></image>
+</view>
+<view class="statusBar" style="height:{{statusBarHeight}}px"></view>
+<view class="navBar" style="height:44px">云药台</view>
+<view class="main">
+  <swiper
+    class="swiper-banners"
+    circular="true"
+  >
+    <swiper-item bindtap="todrugmanagement">
+      <view class="drug">
+        <image class="drugImg" src="../../images/adminhome/drugmanage.png"></image>
+      </view>
+    </swiper-item>
+    <swiper-item class="item2" bindtap="toadminmine"> 
+      <view class="drug">
+        <image class="drugImg drug2" src="../../images/adminhome/adminmanage.png"></image>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="text">
+    <text class="title-text">左右滑动进行选择</text>
+  </view>
+</view>

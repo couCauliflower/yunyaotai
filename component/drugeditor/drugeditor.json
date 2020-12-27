@@ -1,0 +1,6 @@
+{
+  "usingComponents":{
+    "nav-bar":"/component/navBar/navBar"
+  },
+  "component":true
+}

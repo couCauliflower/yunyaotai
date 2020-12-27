@@ -1,0 +1,42 @@
+<!--pages/mine/mine.wxml-->
+<image class="background_body" src="../../images/userhomeimgs/bgc.png"></image>
+<view class="wrap_body"></view>
+<view class="statusBar" style="height:{{statusBarHeight}}px;"></view>
+<view class="navbar" style="height:44px;">云药台</view>
+<view class="nickbgc">
+  <view class="addimg">
+    <image class="faceimg" src="{{faceimg}}" bindtap="uploadfaceimg"></image>
+  </view>
+  <view class="nickname">{{userMessage.name}}</view>
+</view>
+<view class="list">
+  <view class="purchase" bindtap="tomine">
+    <image class="purchase_img" src="../../images/mine/coln1.png"></image>
+    <text class="purchase_text">我的购买</text>
+    <image class="purchase_right" src="../../images/mine/right.png"></image>
+  </view>
+  <view class="comment" bindtap="tocomment">
+    <image class="comment_img" src="../../images/mine/coln2.png"></image>
+    <text class="comment_text">我的评价</text>
+    <image class="purchase_right" src="../../images/mine/right.png"></image>
+  </view>
+  <view class="message" bindtap="tospeakadmin">
+    <image class="message_img" src="../../images/mine/coln3.png"></image>
+    <text class="message_text">我的留言</text>
+    <image class="purchase_right" src="../../images/mine/right.png"></image>
+  </view>
+</view>
+<view class="bottom">
+    <view class="main" bindtap="touserhome">
+      <image class="main_img" src="../../images/mine/shouye.png"></image>
+      <view class="main_text">
+        <text>首页</text>
+      </view>
+    </view>
+    <view class="mine">
+      <image class="mine_img" src="../../images/mine/myactive.png"></image>
+      <view class="mine_text">
+        <text>我的</text>
+      </view>
+    </view>
+  </view>

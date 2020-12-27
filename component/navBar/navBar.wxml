@@ -1,0 +1,8 @@
+<view class="bgc-container"></view>
+<view class="statusBar" style="height:{{statusBarHeight}}px"></view>
+<view class="navBar" style="height:44px">
+  <text>{{text}}</text>
+  <view class="backBtn" bindtap="backUserHome" data-backurl="{{backUrl}}">
+    <image class="backBtn_img" src="../../images/userhomeimgs/back.png"></image>
+  </view>
+</view>

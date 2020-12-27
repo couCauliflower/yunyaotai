@@ -1,0 +1,89 @@
+<!--pages/userhome/userhome.wxml-->
+<image class="background_body" src="../../images/userhomeimgs/bgc.png"></image>
+<view class="wrap_body"></view>
+<view class="statusBar" style="height:{{statusBarHeight}}px;"></view>
+<view class="navbar" style="height:44px;">云药台</view>
+<view class="container_body">
+
+  <scroll-view scroll-y="true" class="scroll">
+    <view class="search">
+      <image class="search_logo" src="../../images/userhomeimgs/search.png"></image>
+      <input class="search_input" placeholder="请输入药品名称搜索" placeholder-class="drug_search"/>
+    </view>
+    <view class="head-swiper_banners">
+    <swiper class="swiper-banners"
+    indicator-dots="true"
+    indicator-color="rgba(0,0,0,.3)"
+    indicator-active-color="#5bc1c2"
+    autoplay="true"
+    interval="3000"
+    duration="1000"
+    circular="true"
+    >
+    <block>
+      <swiper-item>
+        <image class="banners-image" src="../../images/userhomeimgs/lunbo1.png"></image>
+      </swiper-item>
+    </block>
+    <block>
+      <swiper-item>
+        <image class="banners-image" src="../../images/userhomeimgs/lunbo2.png"></image>
+      </swiper-item>
+    </block>
+    </swiper>
+  </view>
+
+  <view class="head-entrance">
+    <scroll-view
+      class="scroll-view"
+      scroll-x="true"
+    >
+      <block wx:for="{{entryIcon}}" wx:key="index">
+        <view
+          class="scroll-view_X"
+          bindtap="toDrugCategory"
+          data-tag="{{item.tag}}"
+          data-type="{{item.type}}"
+        >
+          <image class="entrance-icon" src="{{item.imgUrl}}"></image>
+          <view class="entrance-text">
+            <text>{{item.title}}</text>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <view class="drug_container">
+    <view class="drug_list" wx:for="{{drugList}}" wx:key="index" bindtap="toDrugDetail" data-drugid="{{item.id}}">
+      <image class="drug_list_img" src="{{item.img1}}"></image>
+      <view class="drug_list_text">
+        <view class="drug_list_text_info">
+          <text>{{item.info}}</text>
+        </view>
+        <view class="drug_list_text_sell">
+          <text class="price">￥{{item.price}}</text>
+          <text class="count">{{item.used}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  </scroll-view>
+
+
+  <view class="bottom">
+    <view class="main">
+      <image class="main_img" src="../../images/userhomeimgs/indexcopy.png"></image>
+      <view class="main_text">
+        <text>首页</text>
+      </view>
+    </view>
+    <view class="mine" bindtap="tomine">
+      <image class="mine_img" src="../../images/userhomeimgs/mine.png"></image>
+      <view class="mine_text">
+        <text>我的</text>
+      </view>
+    </view>
+  </view>
+
+</view>
